@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Poetry / virtualenv
+.venv/
+dist/
+build/
+*.egg-info/
+poetry.toml
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Tooling
+.mypy_cache/
+.ruff_cache/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Generated docs / renders
+docs/site/
+*.png

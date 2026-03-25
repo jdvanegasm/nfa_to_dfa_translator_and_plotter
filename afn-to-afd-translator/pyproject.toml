@@ -1,0 +1,32 @@
+[project]
+name = "nfa-plotter"
+version = "0.1.0"
+description = "Desktop application to generate an NFA from a regex and convert it to a DFA using subset construction."
+authors = [
+    {name = "jdvanegasm",email = "jdvanegasm@outlook.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11,<3.15"
+dependencies = [
+    "pyside6 (>=6.11.0,<7.0.0)",
+    "graphviz (>=0.21,<0.22)"
+]
+
+[project.scripts]
+nfa-plotter = "nfa_plotter.main:run"
+
+[tool.poetry]
+packages = [{include = "nfa_plotter", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.2,<10.0.0)",
+    "pdoc (>=16.0.0,<17.0.0)",
+    "ruff (>=0.15.7,<0.16.0)",
+    "black (>=26.3.1,<27.0.0)",
+    "mypy (>=1.19.1,<2.0.0)"
+]
